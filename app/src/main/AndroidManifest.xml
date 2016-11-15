@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="neobyte.scode.webflip">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MyPDFApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_open_book"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:hardwareAccelerated="true" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CategoryActivity"
+            android:parentActivityName=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ViewPDF_Activity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/FullScreenTheme" />
+        <activity android:name=".HomeActivity"/>
+        <service android:name=".services.DownloadService"/>
+        <receiver android:name=".tools.NetworkChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

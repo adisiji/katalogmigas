@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Buku Saku Migas</string>
+    <string name="search_title">Pencarian</string>
+    <string name="search_hint">Cari Judul..</string>
+    <string name="button_item_pdf">Button PDF</string>
+    <string name="loading_prg_bar">Sinkronisasi dengan Server&#8230;</string>
+    <string name="fail_loading_prgbar">Gagal Sinkronisasi dengan Server</string>
+    <string name="loading_all">loading&#8230;</string>
+
+    <!--Button Card PDF-->
+    <string name="download_item">Download</string>
+    <string name="delete_item">Hapus</string>
+    <string name="open_item">Buka</string>
+    <string name="downloaded_text">Downloaded</string>"
+
+    <!--Button Home-->
+    <string name="cat_1">SKK Migas</string>
+    <string name="cat_2">Ditjen Migas</string>
+    <string name="cat_3">Lingkungan</string>
+    <string name="cat_4">Perijinan</string>
+    <string name="all_book">Semua Buku</string>
+
+    <!--snackbar connection stats-->
+    <string name="no_conn">Tidak Ada Koneksi</string>
+    <string name="connected">Koneksi Terhubung</string>
+
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-0664570763252260/3326522424</string>
+    <string name="interstitial_full_screen">ca-app-pub-0664570763252260/1769900428</string>
+
+    <string name="author_book_icon"><div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">
+        Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </string>
+
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@+id/linPDF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/margin_large"
+    android:layout_marginEnd="@dimen/margin_large"
+    android:layout_marginLeft="@dimen/margin_large"
+    android:layout_marginStart="@dimen/margin_large"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    app:cardCornerRadius="7dp"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:layout_weight="3"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btn_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:text="Header Title Book"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="subHeader"/>
+
+            <RelativeLayout
+                android:id="@+id/root_proses_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/progress_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/downloaded_text"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_below="@id/progress_txt"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toLeftOf="@+id/cancel_download"
+                    android:layout_toStartOf="@+id/cancel_download" />
+
+                <ImageView
+                    android:id="@+id/cancel_download"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/progress_download"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/root_oke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:visibility="gone">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <Button
+                    android:id="@+id/btn_open_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/open_item"
+                    android:background="@drawable/rounded_btn"
+                    android:textColor="@android:color/white"/>
+                <Button
+                    android:id="@+id/btn_delete_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_open_item"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/delete_item"
+                    android:textColor="@color/red_txt_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/root_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_weight="2">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+                <Button
+                    android:id="@+id/btn_download_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/download_item"
+                    android:background="@drawable/btn_rounded_blue"
+                    android:textColor="@color/text_list_pdf"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

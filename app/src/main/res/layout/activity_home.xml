@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+<android.support.percent.PercentRelativeLayout
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="neobyte.scode.webflip.HomeActivity">
+
+<ImageView
+    android:id="@+id/img_title_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_heightPercent="40%"
+    tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/bts_title"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="10%"
+        android:layout_below="@id/img_title_home"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"
+        android:layout_alignParentBottom="true">
+    </com.google.android.gms.ads.AdView>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bts_title"
+        android:layout_above="@id/adViewBanner">
+
+        <Button
+            android:id="@+id/btn_cat_left_top"
+            app:layout_widthPercent="50%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_1"/>
+
+        <Button
+            android:id="@+id/btn_cat_right_top"
+            android:layout_toRightOf="@id/btn_cat_left_top"
+            app:layout_widthPercent="50%"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/cat_2"/>
+
+        <Button
+            android:id="@+id/btn_cat_left_btm"
+            app:layout_widthPercent="50%"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_3"
+            android:layout_below="@id/btn_cat_left_top" />
+        <Button
+            android:id="@+id/btn_cat_right_btm"
+            app:layout_widthPercent="50%"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_cat_left_btm"
+            android:layout_below="@id/btn_cat_left_top"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/cat_4"/>
+
+
+    <Button
+        android:id="@+id/btn_all_book"
+        app:layout_widthPercent="70%"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_below="@id/btn_cat_right_btm"
+        android:text="@string/all_book"
+        android:layout_centerHorizontal="true"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
+</ScrollView>
